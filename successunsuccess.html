@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login & Signup with Login Stats</title>
+  <link rel="stylesheet" href="successlogin.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Welcome</h2>
+    
+    <div id="form-section">
+      <div id="signup">
+        <h3>Signup</h3>
+        <input type="text" id="signup-username" placeholder="Username" />
+        <input type="password" id="signup-password" placeholder="Password" />
+        <button onclick="signup()">Signup</button>
+      </div>
+
+      <div id="login">
+        <h3>Login</h3>
+        <input type="text" id="login-username" placeholder="Username" />
+        <input type="password" id="login-password" placeholder="Password" />
+        <button onclick="login()">Login</button>
+      </div>
+    </div>
+
+    <div id="welcome-section" style="display: none;">
+      <h3 id="welcome-user"></h3>
+      <p id="login-stats"></p>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script src="successcript.js"></script>
+</body>
+</html>

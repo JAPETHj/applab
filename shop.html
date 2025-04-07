@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ShopEasy</title>
+  <link rel="stylesheet" href="shop.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🛍️ ShopEasy</h1>
+
+    <div id="auth">
+      <h3>Login</h3>
+      <input id="login-username" placeholder="Username" />
+      <input id="login-password" placeholder="Password" type="password" />
+      <button onclick="login()">Login</button>
+
+      <h3>Signup</h3>
+      <input id="signup-username" placeholder="Username" />
+      <input id="signup-password" placeholder="Password" type="password" />
+      <button onclick="signup()">Signup</button>
+
+      <p id="auth-msg"></p>
+    </div>
+
+    <div id="shop" class="hidden">
+      <h2>Welcome, <span id="user-name"></span>!</h2>
+      <button onclick="logout()">Logout</button>
+      <h3>Products</h3>
+      <div id="product-list"></div>
+
+      <h3>Cart</h3>
+      <ul id="cart-items"></ul>
+      <button onclick="checkout()">Checkout</button>
+
+      <h3>Order History</h3>
+      <ul id="order-history"></ul>
+    </div>
+  </div>
+
+  <script src="shop.js"></script>
+</body>
+</html>

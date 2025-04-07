@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>File Server</title>
+  <link rel="stylesheet" href="files.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📁 File Server</h1>
+
+    <!-- Public Files -->
+    <div>
+      <h2>🌐 Public Files (<span id="public-count">0</span>)</h2>
+      <ul id="public-files"></ul>
+
+      <div id="public-upload" class="hidden">
+        <input type="file" id="public-file-input" />
+        <button onclick="uploadFile('public')">Upload Public File</button>
+      </div>
+    </div>
+
+    <!-- Auth -->
+    <div id="auth-section">
+      <h3>Sign Up</h3>
+      <input id="signup-username" placeholder="Username" />
+      <input id="signup-password" placeholder="Password" type="password"/>
+      <button onclick="signup()">Sign Up</button>
+
+      <h3>Login</h3>
+      <input id="login-username" placeholder="Username" />
+      <input id="login-password" placeholder="Password" type="password"/>
+      <button onclick="login()">Login</button>
+      <p id="login-msg"></p>
+    </div>
+
+    <!-- Private Files -->
+    <div id="private-section" class="hidden">
+      <h2>🔒 Private Files (<span id="private-count">0</span>)</h2>
+      <ul id="private-files"></ul>
+      <input type="file" id="private-file-input" />
+      <button onclick="uploadFile('private')">Upload Private File</button>
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+  <script src="files.js"></script>
+</body>
+</html>
